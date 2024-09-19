@@ -4,40 +4,40 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "At the time", time: 15 },
-  { text: "The whisper of birds", time: 18 },
-  { text: "Lonely before the sun cried", time: 27 },
-  { text: "Fell from the sky", time: 32 },
-  { text: "Like water drops", time: 33 },
-  { text: "Where I'm now? I don't know why", time: 41 },
-  { text: "Nice butterflies in my hands", time: 47 },
-  { text: "Too much light for twilight", time: 54 },
-  { text: "In the mood for the flowers love", time: 59 },
-  { text: "That vision", time: 67 },
-  { text: "Really strong, blew my mind", time: 72 },
-  { text: "Silence Let me see what it was", time: 78 },
-  { text: "I only want to live in clouds", time: 83 },
-  { text: "Where I'm now? I don't know why", time: 91 },
-  { text: "Nice butterflies in my hands", time: 97 },
-  { text: "Too much light for twilight", time: 104 },
-  { text: "In the mood for the flowers love", time: 108 },
-  { text: "At the time", time: 144 },
-  { text: "The whisper of birds", time: 148 },
-  { text: "Lonely before the sun cried", time: 153 },
-  { text: "Fell from the sky", time: 158 },
-  { text: "Like water drops", time: 164 },
-  { text: "Where I'm now? I don't know why", time: 169 },
-  { text: "Nice butterflies in my hands", time: 176 },
-  { text: "Too much light for twilight", time: 183 },
-  { text: "In the mood for the flowers", time: 188 },
-  { text: "Love.", time: 140 },
+  { text: "Swinging in the backyard", time: 18 },
+  { text: "Pull up in your fast car", time: 20 },
+  { text: "Whistling my name", time: 22 },
+  { text: "Open up a beer", time: 26 },
+  { text: "And you say", time: 27 },
+  { text: "Get over here", time: 28 },
+  { text: "And play a video game", time: 29 },
+  { text: "I'm in his favourite sundress", time: 31 },
+  { text: "Watchin' me get undressed", time: 33 },
+  { text: "Take that body downtown", time: 35 },
+  { text: "I say, &quot;You the bestest&quot;", time: 42 },
+  { text: "Lean in for a big kiss", time: 42 },
+  { text: "Put his favourite perfume on", time: 44 },
+  { text: "Go play your video game", time: 44 },
+  { text: "It's you, it's you, it's all for you", time: 46 },
+  { text: "Everything I do", time: 47 },
+  { text: "I tell you all the time", time: 48 },
+  { text: "Heaven is a place on earth with you", time: 50 },
+  { text: "Tell me all the things you wanna do", time: 52 },
+  { text: "I heard that you like the bad girls", time: 54 },
+  { text: "Honey, is that true?", time: 56 },
+  { text: "It's better than I ever even knew", time: 58 },
+  { text: "They say that the world was built for two", time: 60 },
+  { text: "Only worth living if somebody is loving you", time: 62 },
+  { text: "And, baby, now you do", time: 64 },
+  { text: "Nice butterflies in my hands", time: 66 },
+  { text: "Singin' in the old bars", time: 68 },
 ];
 
 // Animar las letras
 function updateLyrics() {
   var time = Math.floor(audio.currentTime);
   var currentLine = lyricsData.find(
-    (line) => time >= line.time && time < line.time + 6
+    (line) => time >= line.time && time < line.time + 2
   );
 
   if (currentLine) {
@@ -55,7 +55,7 @@ function updateLyrics() {
   }
 }
 
-setInterval(updateLyrics, 1000);
+setInterval(updateLyrics, 2000);
 
 //funcion titulo
 // Función para ocultar el título después de 216 segundos
