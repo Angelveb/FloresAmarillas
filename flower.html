@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
-
+    <style>
+      #lyrics {
+          opacity: 0;
+          transition: opacity 0.5s;
+      }
+  </style>
 
   </head>
   <body class="container">
     <audio src="sound/04 - Video Games - Lana Del Rey.mp3" autoplay></audio>
-    <div id="lyrics"></div>
+    <div id="lyrics">
+
+    </div>
 
     <h1 class="titulo">It's you, it's you, it's all for you. Everything I do.<br> <br>
     </h1>
@@ -326,6 +333,7 @@
         </div>
       </div>
     </div>
+    <script src="anim.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
