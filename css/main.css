@@ -47,18 +47,45 @@ body {
   position: absolute;
   font-weight: bold;
   letter-spacing: 10px;
-  opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
 }
+
+.titulo span {
+  opacity: 0;
+  display: inline-block;
+}
+
+.parte1 {
+  animation: fadeIn 3s ease-in-out forwards 54s; /* Inicia inmediatamente */
+}
+
+.parte2 {
+  animation: fadeIn 3s ease-in-out forwards 55s; /* Inicia 1 segundo después */
+}
+
+.parte3 {
+  animation: fadeIn 3s ease-in-out forwards 56s; /* Inicia 2 segundos después */
+}
+
+.parte4 {
+  animation: fadeIn 3s ease-in-out forwards 58s; /* Inicia 2 segundos después */
+}
+
+/* Efecto de aura o parpadeo */
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
     opacity: 1;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: none;
   }
 }
+
 
 .night {
   z-index: -1;
