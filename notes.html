@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Notas</title>
+    <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylenotas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script class="module">
+        // Agrega un evento de scroll
+        window.addEventListener('scroll', () => {
+            const body = document.body;
+            const header = document.querySelector('header');
+
+            // Añadir clase 'scrolled' si se hace scroll más allá de 50px
+            if (window.scrollY > 10) {
+                body.classList.add('scrolled');
+            } else {
+                body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="gradient-text">Holding on to you</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 >
+                    Hola
+                </h2>
+                <p>La belleza de la vida se encuentra en los pequeños momentos compartidos.</p>
+            </section>
+            <section class="notes">
+                <article class="note">
+                    <h3>Título de la nota 1</h3>
+                    <p>Contenido de la nota 1. Puedes agregar aquí texto, imágenes, enlaces, etc.</p>
+                    <time datetime="2023-11-23">Viernes 25 de Octubre de 2024</time>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mis Notas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
