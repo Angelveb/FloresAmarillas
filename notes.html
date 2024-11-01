@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Notas</title>
+    <title>Holding on to you</title>
     <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/stylenotas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script class="module">
         // Agrega un evento de scroll
         window.addEventListener('scroll', () => {
@@ -24,10 +26,31 @@
             }
         });
     </script>
+
+    <script>
+    function createShootingStar() {
+        const star = document.createElement('div');
+        star.className = 'star';
+        const leftPosition = Math.random() * 100; // Posición horizontal aleatoria
+        star.style.left = `${leftPosition}vw`; // Usamos unidades de vista
+        star.style.animationDuration = `${Math.random() * 2 + 4}s`; // Duración aleatoria de la animación
+        star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio para el inicio
+        document.querySelector('.shooting-stars').appendChild(star);
+        
+        // Remover la estrella después de que la animación termine
+        star.addEventListener('animationend', () => {
+            star.remove();
+        });
+    }
+
+    // Crear estrellas cada 800 ms
+    setInterval(createShootingStar, 800);
+</script>
+
 </head>
 
 <body>
-
+    <div class="shooting-stars"></div>
     <header>
         <h1 class="gradient-text">Holding on to you</h1>
     </header>
@@ -35,18 +58,55 @@
     <div class="container">
         <main>
             <section>
-                <h2 >
-                    Hola
+                <h2>
+                    ¿Qué es esto?
                 </h2>
-                <p>La belleza de la vida se encuentra en los pequeños momentos compartidos.</p>
+                <p>Bienvenida a este rincón de datos interesantes, donde compartiré notas y curiosidades dedicadas a alguien especial: tú. <br><br>Cada dato, cada
+                    curiosidad, y cada pieza de información aquí están pensados para hacerte descubrir algo nuevo o
+                    simplemente compartir algo que considero fascinante. Espero que disfrutes explorando estos detalles
+                    tanto como yo disfruto creándolos.</p>
             </section>
+
             <section class="notes">
                 <article class="note">
-                    <h3>Título de la nota 1</h3>
-                    <p>Contenido de la nota 1. Puedes agregar aquí texto, imágenes, enlaces, etc.</p>
-                    <time datetime="2023-11-23">Viernes 25 de Octubre de 2024</time>
+                    <div class="note-content">
+                        <h3>La Torre Eiffel puede ser más alta en verano</h3>
+                        <p>La Torre Eiffel, como toda estructura de metal, experimenta un fenómeno conocido como dilatación térmica. Esto ocurre porque las moléculas del hierro que componen la estructura se mueven más rápidamente cuando están calientes, lo que causa que se separen ligeramente entre sí, expandiendo el material.</p>
+                        <a style="color:aliceblue" href="https://www.elespanol.com/mundo/20230803/curioso-motivo-torre-eiffel-aumenta-centimetros-verano/782671758_0.html" target="_blank">La Torre Eiffel puede aumentar 15 centímetros cada verano</a>
+                        <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
+                    </div>
+                    <img src="img/Eiffel.jpeg" alt="Imagen relacionada con la nota" class="note-image">
                 </article>
             </section>
+
+            <section class="notes">
+                <article class="note">
+                    <div class="note-content">
+                        <h3>La Verdad sobre los Hámsters y el Agua</h3>
+                        <p>Aunque los hámsters son criaturas terrestres que prefieren ambientes secos, se ha observado que pueden nadar cuando se ven obligados. Su capacidad para flotar se debe a la estructura de sus mejillas, que pueden llenar de aire. Sin embargo, esta experiencia no es natural ni recomendable, ya que el estrés y el riesgo de enfermedad son altos. Es esencial respetar sus necesidades y proporcionarles un entorno seco y seguro, donde puedan explorar y jugar sin temor al agua.
+                        <br><br>
+                        <a style="color:aliceblue" href="https://thehamsterhouse.com/hamster-info/can-hamsters-swim/" target="_blank">https://thehamsterhouse.com/hamster-info/can-hamsters-swim/</a>
+                        </p>
+                        <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
+                    </div>
+                    <img src="img/hamster.jpeg" alt="Imagen relacionada con la nota" class="note-image">
+                </article>
+            </section>
+
+            <section class="notes">
+                <article class="note">
+                    <div class="note-content">
+                        <h3>Grullas de Origami</h3>
+                        <p>Uno de los símbolos más emblemáticos del origami es la grulla. Según una leyenda japonesa, plegar mil grullas de origami otorga un deseo. Esta creencia ha hecho que el origami de grullas sea una expresión de esperanza y paz, especialmente en el contexto de la posguerra y la historia de Sadako Sasaki, una niña que sobrevivió a la bomba atómica en Hiroshima y se dedicó a plegar grullas.
+                        <br><br>
+                        <a style="color:aliceblue" href="https://news.nationalgeographic.org/how-paper-cranes-became-a-symbol-of-healing-in-japan/" target="_blank">National Geographic sobre las grullas de papel y su significado</a>
+                        </p>
+                        <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
+                    </div>
+                    <img src="img/origami.jpeg" alt="Imagen relacionada con la nota" class="note-image">
+                </article>
+            </section>
+
         </main>
     </div>
 
