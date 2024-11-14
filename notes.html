@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+
     <script class="module">
         // Agrega un evento de scroll
         window.addEventListener('scroll', () => {
@@ -28,24 +31,24 @@
     </script>
 
     <script>
-    function createShootingStar() {
-        const star = document.createElement('div');
-        star.className = 'star';
-        const leftPosition = Math.random() * 100; // Posición horizontal aleatoria
-        star.style.left = `${leftPosition}vw`; // Usamos unidades de vista
-        star.style.animationDuration = `${Math.random() * 2 + 4}s`; // Duración aleatoria de la animación
-        star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio para el inicio
-        document.querySelector('.shooting-stars').appendChild(star);
-        
-        // Remover la estrella después de que la animación termine
-        star.addEventListener('animationend', () => {
-            star.remove();
-        });
-    }
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const leftPosition = Math.random() * 100; // Posición horizontal aleatoria
+            star.style.left = `${leftPosition}vw`; // Usamos unidades de vista
+            star.style.animationDuration = `${Math.random() * 2 + 4}s`; // Duración aleatoria de la animación
+            star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio para el inicio
+            document.querySelector('.shooting-stars').appendChild(star);
 
-    // Crear estrellas cada 800 ms
-    setInterval(createShootingStar, 800);
-</script>
+            // Remover la estrella después de que la animación termine
+            star.addEventListener('animationend', () => {
+                star.remove();
+            });
+        }
+
+        // Crear estrellas cada 800 ms
+        setInterval(createShootingStar, 800);
+    </script>
 
 </head>
 
@@ -57,25 +60,121 @@
 
     <div class="container">
         <main>
-            
+
             <section>
                 <br><br><br>
                 <h2>
                     ¿Qué es esto?
                 </h2>
-                <p>Es un lugar donde compartiré notas y curiosidades dedicadas a alguien especial: tú. <br><br>Cada dato, cada
+                <p>Es un lugar donde compartiré notas y curiosidades dedicadas a alguien especial: tú. <br><br>Cada
+                    dato, cada
                     curiosidad, y cada pieza de información aquí están pensados para hacerte descubrir algo nuevo o
                     simplemente compartir algo que considero fascinante. Espero que disfrutes explorando estos detalles
                     tanto como yo disfruto creándolos.</p>
             </section>
-            <br><br><br>
+            <br>
+
+            <section class="notes">
+                <article class="note">
+                    <div class="note-content">
+                        <h3>Vida en la oficina antes de la invención de AutoCAD</h3>
+                        <p>Antes del lanzamiento de AutoCAD en 1982, los dibujos de ingeniería se hicieron a mano usando
+                            lápices de diferentes grados, gomas de borrar, cuadrados en T y cuadrados.
+                            <br><br>
+                            Incluso después de todo el trabajo manual, si se requería un cambio, los ingenieros y
+                            fabricantes de herramientas tuvieron que empezar desde cero y hacer los bocetos de nuevo.
+                            Hoy en día, los diseñadores de arquitectura y otros redactores están principalmente haciendo
+                            clic en su mouse y teclado y no encorvados sobre un escritorio gigante preguntándose si se
+                            hará algún cambio en sus borradores finales.
+                        </p>
+                        <a style="color:aliceblue"
+                            href="https://blog.draftsperson.net/life-before-the-invention-of-autocad-1950-1980/"
+                            target="_blank">La vida antes de la invención de AutoCAD</a>
+                        <time datetime="2024-11-1">Viernes 14 de Noviembre de 2024</time>
+                    </div>
+                    <div class="note-image">
+
+                        <!-- Previsualización con Lightbox -->
+                        <a href="img/arquitectura2.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío">
+                            <img src="img/arquitectura2.jpg" alt="Gran Vacío" class="note-image">
+                        </a>
+                        <a href="img/arquitectura3.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                        <a href="img/arquitecto.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 2"></a>
+                        <a href="img/arquitectura4.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="notes">
+                <article class="note">
+                    <div class="note-content">
+                        <h3>Cleopatra</h3>
+                        <p>La última reina de Egipto, vivió alrededor del año 30 a.C., mientras que la Gran Pirámide de
+                            Giza se construyó aproximadamente en el 2,500 a.C. La diferencia entre ambas épocas es de
+                            más de 2,400 años, por lo que Cleopatra estaba notablemente más alejada en el tiempo de la
+                            construcción de las pirámides que nosotros de su vida. Hoy, estando a poco más de 2,000 años
+                            desde Cleopatra, estamos temporalmente más cerca de ella que ella de las pirámides, lo que
+                            muestra cuánto tiempo ha pasado desde el auge del antiguo Egipto.</p>
+                        <a style="color:aliceblue" href="https://veluzian.com/cleopatras-era-and-moon-landing/"
+                            target="_blank">Cleopatra está cronológicamente más cerca del alunizaje que de la
+                            construcción de la Gran Pirámide</a>
+                        <time datetime="2024-11-1">Viernes 14 de Noviembre de 2024</time>
+                    </div>
+                    <div class="note-image">
+
+                        <!-- Previsualización con Lightbox -->
+                        <a href="img/piramide2.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío">
+                            <img src="img/piramide2.jpg" alt="Gran Vacío" class="note-image">
+                        </a>
+                        <a href="img/piramide.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                        <a href="img/cleopatra2.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="notes">
+                <article class="note">
+                    <div class="note-content">
+                        <h3>Daruma</h3>
+                        <p>El Daruma es una figura tradicional japonesa inspirada en Bodhidharma, el fundador del
+                            budismo zen. Tiene una forma redonda, sin brazos ni piernas, y suele estar pintada de rojo
+                            con detalles en negro y dorado. Su aspecto distintivo incluye unos ojos sin pupilas, que se
+                            relacionan con una tradición de fijar metas personales.<br><br>
+
+                            El significado y uso del Daruma están centrados en la perseverancia, la buena fortuna y el
+                            logro de objetivos. Cuando una persona establece una meta, pinta una pupila en uno de los
+                            ojos del Daruma. Una vez alcanzada la meta, se pinta el segundo ojo como símbolo de éxito.
+                            Esto refleja el esfuerzo, la resiliencia y el "nunca rendirse" que promueve la cultura
+                            japonesa. Además de su papel como amuleto, el Daruma se ha convertido en un símbolo de buena
+                            suerte y un recordatorio constante de mantener el enfoque en las metas trazadas.</p>
+                        <a style="color:aliceblue" href="https://mymodernmet.com/japanese-daruma-doll/"
+                            target="_blank">Figura tradicional japonesa Daruma</a>
+                        <time datetime="2024-11-1">Viernes 12 de Noviembre de 2024</time>
+                    </div>
+                    <div class="note-image">
+
+                        <!-- Previsualización con Lightbox -->
+                        <a href="img/daruma.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío">
+                            <img src="img/daruma.jpg" alt="Gran Vacío" class="note-image">
+                        </a>
+                        <a href="img/daruma2.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 2"></a>
+                        <a href="img/daruma3.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                        <a href="img/dar4.jpg" data-lightbox="galeria-vacia" data-title="Gran Vacío 3"></a>
+                    </div>
+                </article>
+            </section>
 
             <section class="notes">
                 <article class="note">
                     <div class="note-content">
                         <h3>El gran vacío</h3>
-                        <p>Existe una región en el espacio conocida como el "Gran Vacío" (Great Void) que tiene una densidad de galaxias mucho menor que otras áreas del universo. Se estima que el Gran Vacío tiene un tamaño de alrededor de 330 millones de años luz de diámetro y es uno de los lugares más vacíos del cosmos.</p>
-                        <a style="color:aliceblue" href="https://asd.gsfc.nasa.gov/blueshift/index.php/2013/07/30/jasons-blog-next-stop-voids/" target="_blank">Next Stop: Voids</a>
+                        <p>Existe una región en el espacio conocida como el "Gran Vacío" (Great Void) que tiene una
+                            densidad de galaxias mucho menor que otras áreas del universo. Se estima que el Gran Vacío
+                            tiene un tamaño de alrededor de 330 millones de años luz de diámetro y es uno de los lugares
+                            más vacíos del cosmos.</p>
+                        <a style="color:aliceblue"
+                            href="https://asd.gsfc.nasa.gov/blueshift/index.php/2013/07/30/jasons-blog-next-stop-voids/"
+                            target="_blank">Next Stop: Voids</a>
                         <time datetime="2024-11-1">Viernes 5 de Noviembre de 2024</time>
                     </div>
                     <img src="img/granvacio.jpeg" alt="Imagen relacionada con la nota" class="note-image">
@@ -86,8 +185,13 @@
                 <article class="note">
                     <div class="note-content">
                         <h3>La música y su efecto en el cerebro</h3>
-                        <p>Escuchar música puede activar varias áreas del cerebro, incluyendo las relacionadas con la emoción, la memoria y la atención. Investigaciones han demostrado que la música puede incluso mejorar el rendimiento cognitivo y facilitar el aprendizaje en ciertas circunstancias.</p>
-                        <a style="color:aliceblue" href="https://magazine.hms.harvard.edu/articles/how-music-resonates-brain" target="_blank">Cómo resuena la música en el cerebro</a>
+                        <p>Escuchar música puede activar varias áreas del cerebro, incluyendo las relacionadas con la
+                            emoción, la memoria y la atención. Investigaciones han demostrado que la música puede
+                            incluso mejorar el rendimiento cognitivo y facilitar el aprendizaje en ciertas
+                            circunstancias.</p>
+                        <a style="color:aliceblue"
+                            href="https://magazine.hms.harvard.edu/articles/how-music-resonates-brain"
+                            target="_blank">Cómo resuena la música en el cerebro</a>
                         <time datetime="2024-11-1">Viernes 5 de Noviembre de 2024</time>
                     </div>
                     <img src="img/musica.jpeg" alt="Imagen relacionada con la nota" class="note-image">
@@ -98,8 +202,12 @@
                 <article class="note">
                     <div class="note-content">
                         <h3>Ötzi, el hombre de hielo</h3>
-                        <p>Se encontró momificado en los Alpes con más de 50 tatuajes. ¡Y esto ocurrió hace más de 5.000 años! Esto demuestra que la práctica de tatuarse es mucho más antigua de lo que pensamos y que ha sido parte de diversas culturas a lo largo de la historia.</p>
-                        <a style="color:aliceblue" href="https://www.smithsonianmag.com/smart-news/how-did-otzi-the-iceman-get-his-tattoos-archaeologists-and-tattoo-artists-unravel-the-mystery-180984194/" target="_blank">¿Cómo se hizo los tatuajes Ötzi, el hombre de hielo?</a>
+                        <p>Se encontró momificado en los Alpes con más de 50 tatuajes. ¡Y esto ocurrió hace más de 5.000
+                            años! Esto demuestra que la práctica de tatuarse es mucho más antigua de lo que pensamos y
+                            que ha sido parte de diversas culturas a lo largo de la historia.</p>
+                        <a style="color:aliceblue"
+                            href="https://www.smithsonianmag.com/smart-news/how-did-otzi-the-iceman-get-his-tattoos-archaeologists-and-tattoo-artists-unravel-the-mystery-180984194/"
+                            target="_blank">¿Cómo se hizo los tatuajes Ötzi, el hombre de hielo?</a>
                         <time datetime="2024-11-1">Viernes 5 de Noviembre de 2024</time>
                     </div>
                     <img src="img/tatto.jpeg" alt="Imagen relacionada con la nota" class="note-image">
@@ -110,8 +218,13 @@
                 <article class="note">
                     <div class="note-content">
                         <h3>La Torre Eiffel puede ser más alta en verano</h3>
-                        <p>La Torre Eiffel, como toda estructura de metal, experimenta un fenómeno conocido como dilatación térmica. Esto ocurre porque las moléculas del hierro que componen la estructura se mueven más rápidamente cuando están calientes, lo que causa que se separen ligeramente entre sí, expandiendo el material.</p>
-                        <a style="color:aliceblue" href="https://www.elespanol.com/mundo/20230803/curioso-motivo-torre-eiffel-aumenta-centimetros-verano/782671758_0.html" target="_blank">La Torre Eiffel puede aumentar 15 centímetros cada verano</a>
+                        <p>La Torre Eiffel, como toda estructura de metal, experimenta un fenómeno conocido como
+                            dilatación térmica. Esto ocurre porque las moléculas del hierro que componen la estructura
+                            se mueven más rápidamente cuando están calientes, lo que causa que se separen ligeramente
+                            entre sí, expandiendo el material.</p>
+                        <a style="color:aliceblue"
+                            href="https://www.elespanol.com/mundo/20230803/curioso-motivo-torre-eiffel-aumenta-centimetros-verano/782671758_0.html"
+                            target="_blank">La Torre Eiffel puede aumentar 15 centímetros cada verano</a>
                         <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
                     </div>
                     <img src="img/Eiffel.jpeg" alt="Imagen relacionada con la nota" class="note-image">
@@ -122,9 +235,16 @@
                 <article class="note">
                     <div class="note-content">
                         <h3>La Verdad sobre los Hámsters y el Agua</h3>
-                        <p>Aunque los hámsters son criaturas terrestres que prefieren ambientes secos, se ha observado que pueden nadar cuando se ven obligados. Su capacidad para flotar se debe a la estructura de sus mejillas, que pueden llenar de aire. Sin embargo, esta experiencia no es natural ni recomendable, ya que el estrés y el riesgo de enfermedad son altos. Es esencial respetar sus necesidades y proporcionarles un entorno seco y seguro, donde puedan explorar y jugar sin temor al agua.
-                        <br><br>
-                        <a style="color:aliceblue" href="https://thehamsterhouse.com/hamster-info/can-hamsters-swim/" target="_blank">https://thehamsterhouse.com/hamster-info/can-hamsters-swim/</a>
+                        <p>Aunque los hámsters son criaturas terrestres que prefieren ambientes secos, se ha observado
+                            que pueden nadar cuando se ven obligados. Su capacidad para flotar se debe a la estructura
+                            de sus mejillas, que pueden llenar de aire. Sin embargo, esta experiencia no es natural ni
+                            recomendable, ya que el estrés y el riesgo de enfermedad son altos. Es esencial respetar sus
+                            necesidades y proporcionarles un entorno seco y seguro, donde puedan explorar y jugar sin
+                            temor al agua.
+                            <br><br>
+                            <a style="color:aliceblue"
+                                href="https://thehamsterhouse.com/hamster-info/can-hamsters-swim/"
+                                target="_blank">https://thehamsterhouse.com/hamster-info/can-hamsters-swim/</a>
                         </p>
                         <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
                     </div>
@@ -136,9 +256,15 @@
                 <article class="note">
                     <div class="note-content">
                         <h3>Grullas de Origami</h3>
-                        <p>Uno de los símbolos más emblemáticos del origami es la grulla. Según una leyenda japonesa, plegar mil grullas de origami otorga un deseo. Esta creencia ha hecho que el origami de grullas sea una expresión de esperanza y paz, especialmente en el contexto de la posguerra y la historia de Sadako Sasaki, una niña que sobrevivió a la bomba atómica en Hiroshima y se dedicó a plegar grullas.
-                        <br><br>
-                        <a style="color:aliceblue" href="https://news.nationalgeographic.org/how-paper-cranes-became-a-symbol-of-healing-in-japan/" target="_blank">National Geographic sobre las grullas de papel y su significado</a>
+                        <p>Uno de los símbolos más emblemáticos del origami es la grulla. Según una leyenda japonesa,
+                            plegar mil grullas de origami otorga un deseo. Esta creencia ha hecho que el origami de
+                            grullas sea una expresión de esperanza y paz, especialmente en el contexto de la posguerra y
+                            la historia de Sadako Sasaki, una niña que sobrevivió a la bomba atómica en Hiroshima y se
+                            dedicó a plegar grullas.
+                            <br><br>
+                            <a style="color:aliceblue"
+                                href="https://news.nationalgeographic.org/how-paper-cranes-became-a-symbol-of-healing-in-japan/"
+                                target="_blank">National Geographic sobre las grullas de papel y su significado</a>
                         </p>
                         <time datetime="2024-11-1">Viernes 1 de Noviembre de 2024</time>
                     </div>

@@ -105,7 +105,7 @@ header h1 {
 .note-image {
     width: 100%; /* Hacer que la imagen sea responsiva */
     max-width: 280px; /* Ancho máximo de la imagen */
-    height: auto; /* Altura automática para mantener la relación de aspecto */
+    max-height: 280px; /* Altura automática para mantener la relación de aspecto */
     object-fit: cover;
     border-radius: 50%; /* Hace la imagen ovalada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -113,7 +113,7 @@ header h1 {
 }
 
 .note-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -227,3 +227,4 @@ footer {
         font-size: 0.75em; /* Tamaño de fuente del pie de página */
     }
 }
+
