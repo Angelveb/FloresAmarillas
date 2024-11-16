@@ -228,3 +228,26 @@ footer {
     }
 }
 
+/* Estilo general para las notas */
+.note-video {
+    margin: 1rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para el video */
+.styled-video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Efecto hover */
+.note-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
