@@ -46,16 +46,36 @@ function renderDescription(description) {
 
 // Ejemplo de datos
 const notesData = [
+
+    {
+        title: "Los moáis tienen cuerpo",
+        description: 'Los moáis son gigantescas estatuas talladas en piedra volcánica que representan figuras humanas. Estas esculturas fueron creadas por los antiguos habitantes de la isla, los Rapa Nui. Los moáis tienen un significado espiritual y cultural profundo, ya que se cree que representaban a los antepasados de la isla, quienes, según las creencias locales, tenían un poder divino que protegía a la comunidad.\n\nUna gran incógnita de la Isla de Pascua es cómo los Rapa Nui transportaron las enormes estatuas desde la cantera de Rano Raraku hasta las plataformas Ahu. Se ha sugerido que usaban una técnica llamada "caminar", en la que usaban cuerdas para balancear y guiar las estatuas, haciéndolas avanzar de manera coordinada. Sin embargo, esta teoría sigue siendo debatida.',
+        link: "https://elcomercio.pe/mundo/latinoamerica/chile-como-hicieron-los-antiguos-rapanui-para-trasladar-los-887-moai-que-estan-diseminadas-por-toda-la-isla-de-pascua-noticia",
+        linkText: "¿Cómo trasladaron los 887 moai que están diseminadas por toda la Isla de Pascua?",
+        date: "2024-11-16",
+        displayDate: "Sábado 16 de Noviembre de 2024",
+        gallery: "galeria-11",
+        images: [
+            { src: "img/moai1.jpeg", title: "", alt: "" },               
+            { src: "img/moai2.jpeg", title: "", alt: "" },               
+            { src: "img/moai3.jpeg", title: "", alt: "" },               
+            { src: "img/moai4.jpg", title: "", alt: "" },               
+        ]
+    },
+
     {
         title: "La Estrategia de Caída de los Castores",
         description: 'Los castores, mientras mastican árboles, hacen una pausa para escuchar los ruidos que emite la madera al ir cediendo. Esto les permite identificar el punto de quiebre y determinar la dirección en la que caerá el árbol, lo cual es crucial para su seguridad. Esta habilidad les ayuda a evitar quedar atrapados bajo el árbol cuando este cae. Además, los castores emplean una técnica de corte específica, que puede ser influenciada por la pendiente del terreno y la postura en la que se encuentran mientras cortan, lo que les permite dirigir la caída de los árboles hacia áreas seguras como el agua​.',
-        link: "https://news.nationalgeographic.org/how-paper-cranes-became-a-symbol-of-healing-in-japan/",
+        link: "https://unofficialnetworks.com/2024/08/07/beaver-pause-listen-tree-felling/",
         linkText: "Los castores se detienen mientras roen los árboles para escuchar los crujidos",
         date: "2024-11-5",
         displayDate: "Sábado 16 de Noviembre de 2024",
         gallery: "galeria-10",
         images: [
+            { src: "img/castor2.jpg", title: "", alt: "" },               
             { src: "img/castor1.jpg", title: "", alt: "" },               
+            { src: "img/castor3.png", title: "", alt: "" },               
+            { src: "img/castor4.jpeg", title: "", alt: "" },               
         ]
     },
 
@@ -166,6 +186,7 @@ const notesData = [
         gallery: "galeria-2",
         images: [
             { src: "img/hamster.jpeg", title: "", alt: "" },       
+            { src: "img/hamster2.jpeg", title: "", alt: "" },       
         ]
     },
 
