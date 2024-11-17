@@ -1,52 +1,159 @@
 /* Contenedor principal */
 .container {
-    max-width: 1000px; /* Ajusta este valor según lo necesites */
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
-    padding: 0 20px; /* Espaciado a los lados */
+    max-width: 1000px;
+    /* Ajusta este valor según lo necesites */
+    margin: 0 auto;
+    /* Centra el contenedor en la pantalla */
+    padding: 0 20px;
+    /* Espaciado a los lados */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 /* Estilos generales */
-html, body {
+html,
+body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     margin: 0;
     padding: 0;
-    background-color: rgb(19, 19, 20);
+     background-color: #0e1014; 
+
+
+    /* background-image:
+        radial-gradient(37.88% 68.62% at 50% 0, rgba(10, 233, 138, .3) 0, rgba(0, 124, 71, 0) 80%),
+        radial-gradient(100% 28.09% at 100% 10%, rgba(10, 233, 138, .2) 0, rgba(0, 124, 71, .1) 80%, rgba(0, 124, 71, 0) 100%),
+        linear-gradient(180deg, rgba(0, 124, 71, .075) 35.79%, rgba(0, 124, 71, .05) 80%, #13161c),
+        radial-gradient(74.84% 135.56% at 100% 10%, rgba(0, 124, 71, .5) 0, #13161c 80%);
+        background-color: #13161c; */
+
+    /* background-image:
+        radial-gradient(40% 70% at 50% 0, rgba(153, 0, 51, 0.4) 0, rgba(102, 0, 34, 0.1) 90%),
+        radial-gradient(100% 25% at 100% 5%, rgba(204, 0, 51, 0.3) 0, rgba(102, 0, 34, 0.2) 70%, rgba(51, 0, 17, 0) 100%),
+        linear-gradient(180deg, rgba(102, 0, 34, 0.1) 40%, rgba(51, 0, 17, 0.05) 80%, #13161c),
+        radial-gradient(75% 140% at 90% 10%, rgba(153, 0, 51, 0.6) 0, #13161c 85%);
+    background-color: #13161c; */
+
+    /* background-image: 
+    radial-gradient(37.88% 68.62% at 50% 0, rgba(200, 162, 255, 0.3) 0, rgba(128, 100, 204, 0) 80%), 
+    radial-gradient(100% 28.09% at 100% 10%, rgba(200, 162, 255, 0.2) 0, rgba(128, 100, 204, 0.1) 80%, rgba(128, 100, 204, 0) 100%), 
+    linear-gradient(180deg, rgba(128, 100, 204, 0.075) 35.79%, rgba(128, 100, 204, 0.05) 80%, #13161c), 
+    radial-gradient(74.84% 135.56% at 100% 10%, rgba(200, 162, 255, 0.5) 0, #13161c 80%);
+    background-color: #13161c; */
+
+
+    background-repeat: no-repeat;
+
     height: 100%;
 }
 
 /* Encabezado */
 header {
-    background: rgba(0, 0, 0, 0.836); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.836);
+    /* Fondo semitransparente */
     color: #ffffff;
-    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s;
+    transition: all 0.5s ease-in-out;
+    /* Transición más fluida */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10%); /* Efecto de desenfoque */
+    backdrop-filter: blur(10%);
+    /* Efecto de desenfoque */
 }
 
-/* Animación de header al hacer scroll */
 body.scrolled header {
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    /* Reducido para mayor contraste */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo más oscuro al desplazarse */
 }
 
 header:hover {
     background-color: #292d33;
-    padding: 30px 0;
+    padding: 10px 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
-    font-weight: bold;
+    font-weight: 400;
     padding-left: 20px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.1);
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    z-index: 1; /* Coloca las partículas detrás del contenido */
+    opacity: 15%;
+    animation: particlesAnimation 5s linear infinite;
+}
+
+.main-content {
+    align-items: center;
+    text-align: center;
+}
+
+.main-title {
+    font-weight: 400;
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    color: #fff;
+    text-wrap: balance
+}
+
+.main-title span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(90deg,
+            #4285f4,
+            #9b72cb,
+            #d96570,
+            #ff6969,
+            #a30616,
+            #a30616);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s ease infinite;
+}
+
+.main-paragraph {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    max-width: 410px;
+    color: #c4c8ce;
+    font-weight: 400;
+}
+
+.main-input{
+    text-align: center;
+    border-radius: .5rem;
+    border: 2px solid #1a1d3c;
+    background: #0d0f14;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: .365rem 2.5rem .375rem 1rem;
+    margin: 0 auto;
+    width: 50%;
+    z-index: 10;
+    
 }
 
 /* Contenido de las notas */
@@ -62,7 +169,8 @@ header h1 {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #1c1c1e;
+    /* background: linear-gradient(135deg, #1c1c1e, #292d33); */
+    background: linear-gradient(120deg, #3a171d71, #1a263c50, #242429);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
@@ -81,8 +189,8 @@ header h1 {
 }
 
 .note h3 {
-    font-size: 1.2em;
-    color: #e3b5f1;
+    font-size: 1.5rem;
+    color: #87909d;
     margin-bottom: 10px;
 }
 
@@ -103,11 +211,15 @@ header h1 {
 
 /* Estilos para la imagen de cada nota */
 .note-image {
-    width: 100%; /* Hacer que la imagen sea responsiva */
-    max-width: 280px; /* Ancho máximo de la imagen */
-    max-height: 280px; /* Altura automática para mantener la relación de aspecto */
+    width: 100%;
+    /* Hacer que la imagen sea responsiva */
+    max-width: 280px;
+    /* Ancho máximo de la imagen */
+    max-height: 280px;
+    /* Altura automática para mantener la relación de aspecto */
     object-fit: cover;
-    border-radius: 50%; /* Hace la imagen ovalada */
+    border-radius: 10%;
+    /* Hace la imagen ovalada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -117,31 +229,27 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Barra lateral */
-aside {
-    background-color: #f5f5f5;
-    padding: 20px;
-}
-
 /* Texto en gradiente */
 .gradient-text {
     position: relative;
     display: inline-block;
     color: transparent;
     background: linear-gradient(90deg,
-      #4285f4,
-      #9b72cb, 
-      #d96570, 
-      #ff6969,
-      #a30616,
-      #a30616
-    );
+            #4285f4,
+            #9b72cb,
+            #d96570,
+            #ff6969,
+            #a30616,
+            #a30616);
     background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-animation 5s ease infinite;
+    animation: gradient-animation 3s ease infinite;
+    /* Más rápida */
 }
+
+
 
 /* Pie de página */
 footer {
@@ -160,94 +268,74 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Asegura que no interfiere con otros elementos */
-    overflow: hidden; /* Oculta las estrellas que se salgan del contenedor */
+
 }
 
 .star {
     position: absolute;
-    width: 10px; /* Ancho de las estrellas */
-    height: 10px; /* Alto de las estrellas */
-    background: rgb(255, 255, 255); /* Color de las estrellas */
-    border-radius: 50%; /* Forma redonda */
-    opacity: 0.5; /* Opacidad */
-    animation: fall linear forwards; /* Animación para las estrellas */
+    width: calc(5px + 5 * random());
+    height: calc(5px + 5 * random());
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: calc(0.3 + 0.7 * random());
+    animation: fall linear forwards;
 }
 
 @keyframes fall {
     0% {
         transform: translateY(-100vh) translateX(0);
-        opacity: 0; /* Comienza invisible */
+        opacity: 0;
     }
+
     10% {
-        opacity: 1; /* Se vuelve visible rápidamente */
+        opacity: 1;
     }
+
     100% {
-        transform: translateY(100vh) translateX(calc(50vw - 50%)); /* Caen hacia abajo */
-        opacity: 0; /* Desvanecen al caer */
+        transform: translateY(100vh) translateX(calc(50vw - 50%));
+        opacity: 0;
     }
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em; /* Tamaño de fuente más pequeño para móviles */
+        font-size: 1.5em;
     }
 
     .note {
-        flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
-        align-items: center; /* Alineación a la izquierda */
+        flex-direction: column;
+        align-items: center;
     }
 
     .note-image {
-        width: 100%; /* Ocupa todo el ancho en móviles */
-        height: auto; /* Mantiene la relación de aspecto */
+        width: 100%;
+        height: auto;
     }
 
     .notes {
-        padding: 10px; /* Menos padding en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .shooting-stars {
+        display: none;
     }
 }
-
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.2em; /* Tamaño de fuente aún más pequeño para dispositivos más pequeños */
+        font-size: 1.2em;
     }
 
     .note h3 {
-        font-size: 1.1em; /* Tamaño de fuente de título de nota */
+        font-size: 1.1em;
     }
 
     .note p {
-        font-size: 0.85em; /* Tamaño de fuente del contenido de la nota */
+        font-size: 0.85em;
     }
 
     footer {
-        font-size: 0.75em; /* Tamaño de fuente del pie de página */
+        font-size: 0.75em;
     }
-}
-
-/* Estilo general para las notas */
-.note-video {
-    margin: 1rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Estilo para el video */
-.styled-video {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-/* Efecto hover */
-.note-video:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }

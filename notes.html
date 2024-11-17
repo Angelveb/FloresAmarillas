@@ -17,12 +17,10 @@
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 
     <script class="module">
-        // Agrega un evento de scroll
         window.addEventListener('scroll', () => {
             const body = document.body;
             const header = document.querySelector('header');
 
-            // Añadir clase 'scrolled' si se hace scroll más allá de 50px
             if (window.scrollY > 10) {
                 body.classList.add('scrolled');
             } else {
@@ -31,51 +29,58 @@
         });
     </script>
 
-    <script>
-        function createShootingStar() {
-            const star = document.createElement('div');
-            star.className = 'star';
-            const leftPosition = Math.random() * 100; // Posición horizontal aleatoria
-            star.style.left = `${leftPosition}vw`; // Usamos unidades de vista
-            star.style.animationDuration = `${Math.random() * 2 + 4}s`; // Duración aleatoria de la animación
-            star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio para el inicio
-            document.querySelector('.shooting-stars').appendChild(star);
-
-            // Remover la estrella después de que la animación termine
-            star.addEventListener('animationend', () => {
-                star.remove();
-            });
-        }
-
-        // Crear estrellas cada 800 ms
-        setInterval(createShootingStar, 800);
-    </script>
-
     <script src="notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    
 
 </head>
 
 <body>
-    <div class="shooting-stars"></div>
+
     <header>
         <h1 class="gradient-text">Holding on to you</h1>
     </header>
 
     <div class="container">
+        
+        
         <main>
 
-            <section>
+            <div id="particles-js"></div>
+        <script>
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 50 },
+                    "size": { "value": 3 },
+                    "move": {
+                        "direction": "bottom",
+                        "speed": 1,
+                        "random": true,
+                    }
+                }
+            });
+        </script>
+
+            <section class="main-content">
+                <br>
+                <h1 class="main-title">Un Mundo de Curiosidades
+                    <span>Esperándote</span>
+                </h1>
+
+                <p class="main-paragraph">Este es un lugar donde compartiré notas y curiosidades dedicadas a alguien
+                    especial: tú. <br><br>Cada pieza de información aquí están pensados para hacerte descubrir algo
+                    nuevo o
+                    simplemente compartir algo que considero fascinante.</p>
+                <br>
+
+                <p class="main-paragraph">Espero que disfrutes explorando estos detalles tanto como yo disfruto
+                    creándolos.</p>
+                <br>
+                <br>
+                <input class="main-input" type="text" placeholder="¿Te gustaría que añadiera algo en específico?">
                 <br><br>
-                <h2>
-                    ¿Qué es esto?
-                </h2>
-                <p>Es un lugar donde compartiré notas y curiosidades dedicadas a alguien especial: tú. <br><br>Cada
-                    dato, cada
-                    curiosidad, y cada pieza de información aquí están pensados para hacerte descubrir algo nuevo o
-                    simplemente compartir algo que considero fascinante. Espero que disfrutes explorando estos detalles
-                    tanto como yo disfruto creándolos.</p>
+
             </section>
-            <br>
 
             <section class="notes-container"></section>
 
