@@ -7,9 +7,9 @@ function renderNotes(notes) {
         article.classList.add("notes");
 
         // Mostrar solo la primera imagen.
-        const firstImage = note.images[0];
+        const firstImage = note.img[0];
         // Excluir la primera imagen de la galería para evitar duplicados.
-        const galleryImages = note.images.slice(1).map(image => `
+        const galleryImages = note.img.slice(1).map(image => `
             <a href="${image.src}" data-lightbox="${note.gallery}" data-title="${image.title}">
                 <img src="${image.src}" alt="${image.alt}" class="note-image" style="display: none;">
             </a>
@@ -48,6 +48,54 @@ function renderDescription(description) {
 const notesData = [
 
     {
+        title: "Naumaquias en el Coliseo",
+        description: 'El Coliseo de Roma, además de ser una maravilla arquitectónica, fue escenario de los espectáculos más impresionantes de la Antigua Roma, incluyendo las naumaquias, batallas navales que representaban enfrentamientos entre flotas en su arena. Para estas recreaciones, el Coliseo podía ser inundado mediante un sistema de canales, y en ellas participaban prisioneros o esclavos forzados a luchar hasta la muerte. Estas batallas eran una muestra del poderío técnico y militar de Roma, diseñadas para entretener a los ciudadanos y reafirmar el control político de los emperadores.\n\n Las naumaquias no solo ocurrían en el Coliseo, sino también en lagos o estanques artificiales cuando las condiciones lo requerían. Estos eventos combinaban espectáculo y realismo, pues las embarcaciones y los combatientes luchaban como en una guerra real, atrayendo a multitudes de todas las clases sociales',
+        link: "https://revistadehistoria.es/naumaquias-el-sangriento-espectaculo-naval-de-la-antigua-roma/",
+        linkText: "El sangriento espectáculo naval de la Antigua Roma",
+        date: "2024-11-24",
+        displayDate: "Domingo 24 de Noviembre de 2024",
+        gallery: "galeria-14",
+        img: [
+            { src: "img/coliseo4.png", title: "", alt: "" },
+            { src: "img/coliseo5.png", title: "", alt: "" },
+            { src: "img/coliseo4.jpg", title: "", alt: "" },
+            { src: "img/coliseo.jpg", title: "", alt: "" },
+            { src: "img/coliseo3.png", title: "", alt: "" },
+        ]
+    },
+
+    {
+        title: "En corea del sur el día 14 de cada mes es especial",
+        description: 'En Corea del Sur, el 14 de cada mes se celebra un día especial para las parejas, y en algunos casos, para los solteros. Estos son algunos ejemplos:\n\n• 14 de enero: Día del Diario, donde se intercambian diarios en blanco.\n• 14 de febrero: San Valentín, en el que las mujeres regalan algo a los hombres.\n• 14 de marzo: Día Blanco, cuando los hombres devuelven los regalos.\n• 14 de abril: Día Negro, dedicado a los solteros, quienes se reúnen para comer jajangmyeon.\n• 14 de mayo: Día de la Rosa, con intercambio de flores entre las parejas.\n• 14 de junio: Día del Beso, celebrando los besos.\n• 14 de julio: Día de la Plata, cuando se intercambian regalos de plata.\n• 14 de agosto: Día Verde, para disfrutar de la naturaleza y beber soju.\n• 14 de septiembre: Día de la Foto, para capturar recuerdos con fotos.\n• 14 de octubre: Día del Vino, donde las parejas comparten vino.\n• 14 de noviembre: Día de la Película, dedicado a ver películas juntos.\n• 14 de diciembre: Día del Abrazo, para compartir abrazos en clima frío',
+        link: "https://mundo-kpop.info/12-fechas-romanticas-de-corea-del-sur-que-quieras-que-existieran-en-tu-pais/",
+        linkText: "En Corea del Sur, el 14 de cada mes tiene un significado especial",
+        date: "2024-11-24",
+        displayDate: "Domingo 24 de Noviembre de 2024",
+        gallery: "galeria-13",
+        img: [
+            { src: "img/corea3.png", title: "", alt: "" },
+            { src: "img/corea.jpg", title: "", alt: "" },
+            { src: "img/corea2.png", title: "", alt: "" },
+        ]
+    },
+
+    {
+        title: "El increíble viaje de las tortugas marinas",
+        description: '¿Sabías que las tortugas marinas nacen en la playa y, al llegar a la adultez, las hembras regresan al mismo lugar para poner sus huevos? Aunque recorren miles de kilómetros, logran orientarse gracias al campo magnético terrestre, como si llevaran un mapa en su mente. Además, la temperatura de la arena durante el desarrollo de los huevos determina el sexo de las crías: temperaturas cálidas producen más hembras y las frías, más machos.Este delicado equilibrio hace que el cambio climático sea una gran amenaza para estas increíbles criaturas.',
+        link: "https://www.nationalgeographic.es/animales/2015/01/las-tortugas-marinas-vuelven-al-lugar-en-el-que-nacieron-para-reproducirse",
+        linkText: "Las tortugas marinas vuelven al lugar en el que nacieron para reproducirse",
+        date: "2024-11-24",
+        displayDate: "Domingo 24 de Noviembre de 2024",
+        gallery: "galeria-12",
+        img: [
+            { src: "img/tortuga.jpg", title: "", alt: "" },
+            { src: "img/tortuga2.png", title: "", alt: "" },
+            { src: "img/tortuga3.jpg", title: "", alt: "" },
+            { src: "img/tortuga4.png", title: "", alt: "" },
+        ]
+    },
+
+    {
         title: "Los moáis tienen cuerpo",
         description: 'Los moáis son gigantescas estatuas talladas en piedra volcánica que representan figuras humanas. Estas esculturas fueron creadas por los antiguos habitantes de la isla, los Rapa Nui. Los moáis tienen un significado espiritual y cultural profundo, ya que se cree que representaban a los antepasados de la isla, quienes, según las creencias locales, tenían un poder divino que protegía a la comunidad.\n\nUna gran incógnita de la Isla de Pascua es cómo los Rapa Nui transportaron las enormes estatuas desde la cantera de Rano Raraku hasta las plataformas Ahu. Se ha sugerido que usaban una técnica llamada "caminar", en la que usaban cuerdas para balancear y guiar las estatuas, haciéndolas avanzar de manera coordinada. Sin embargo, esta teoría sigue siendo debatida.',
         link: "https://elcomercio.pe/mundo/latinoamerica/chile-como-hicieron-los-antiguos-rapanui-para-trasladar-los-887-moai-que-estan-diseminadas-por-toda-la-isla-de-pascua-noticia",
@@ -55,11 +103,11 @@ const notesData = [
         date: "2024-11-16",
         displayDate: "Sábado 16 de Noviembre de 2024",
         gallery: "galeria-11",
-        images: [
-            { src: "img/moai1.jpeg", title: "", alt: "" },               
-            { src: "img/moai2.jpeg", title: "", alt: "" },               
-            { src: "img/moai3.jpeg", title: "", alt: "" },               
-            { src: "img/moai4.jpg", title: "", alt: "" },               
+        img: [
+            { src: "img/moai1.jpeg", title: "", alt: "" },
+            { src: "img/moai2.jpeg", title: "", alt: "" },
+            { src: "img/moai3.jpeg", title: "", alt: "" },
+            { src: "img/moai4.jpg", title: "", alt: "" },
         ]
     },
 
@@ -71,11 +119,10 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Sábado 16 de Noviembre de 2024",
         gallery: "galeria-10",
-        images: [
-            { src: "img/castor2.jpg", title: "", alt: "" },               
-            { src: "img/castor1.jpg", title: "", alt: "" },               
-            { src: "img/castor3.png", title: "", alt: "" },               
-            { src: "img/castor4.jpeg", title: "", alt: "" },               
+        img: [
+            { src: "img/castor2.jpg", title: "", alt: "" },
+            { src: "img/castor1.jpg", title: "", alt: "" },
+            { src: "img/castor3.png", title: "", alt: "" },
         ]
     },
 
@@ -87,7 +134,7 @@ const notesData = [
         date: "2024-11-14",
         displayDate: "Jueves 14 de Noviembre de 2024",
         gallery: "galeria-9",
-        images: [
+        img: [
             { src: "img/arquitectura2.jpg", title: "", alt: "" },
             { src: "img/arquitecto.jpg", title: "", alt: "" },
             { src: "img/arquitectura4.jpg", title: "", alt: "" },
@@ -102,7 +149,7 @@ const notesData = [
         date: "2024-11-14",
         displayDate: "Jueves 14 de Noviembre de 2024",
         gallery: "galeria-8",
-        images: [
+        img: [
             { src: "img/piramide2.jpg", title: "", alt: "" },
             { src: "img/piramide.jpg", title: "", alt: "" },
             { src: "img/cleopatra2.jpg", title: "", alt: "" },
@@ -117,10 +164,10 @@ const notesData = [
         date: "2024-11-12",
         displayDate: "Martes 12 de Noviembre de 2024",
         gallery: "galeria-7",
-        images: [
-            { src: "img/daruma.jpg", title: "", alt: "" },     
-            { src: "img/daruma2.jpg", title: "", alt: "" },     
-            { src: "img/daruma3.jpg", title: "", alt: "" },     
+        img: [
+            { src: "img/daruma.jpg", title: "", alt: "" },
+            { src: "img/daruma2.jpg", title: "", alt: "" },
+            { src: "img/daruma3.jpg", title: "", alt: "" },
         ]
     },
 
@@ -132,8 +179,8 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Martes 5 de Noviembre de 2024",
         gallery: "galeria-6",
-        images: [
-            { src: "img/granvacio.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/granvacio.jpeg", title: "", alt: "" },
         ]
     },
 
@@ -145,8 +192,8 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Martes 5 de Noviembre de 2024",
         gallery: "galeria-5",
-        images: [
-            { src: "img/musica.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/musica.jpeg", title: "", alt: "" },
         ]
     },
 
@@ -158,8 +205,8 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Martes 5 de Noviembre de 2024",
         gallery: "galeria-4",
-        images: [
-            { src: "img/tatto.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/tatto.jpeg", title: "", alt: "" },
         ]
     },
 
@@ -171,8 +218,8 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Viernes 1 de Noviembre de 2024",
         gallery: "galeria-3",
-        images: [
-            { src: "img/Eiffel.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/Eiffel.jpeg", title: "", alt: "" },
         ]
     },
 
@@ -184,9 +231,9 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Viernes 1 de Noviembre de 2024",
         gallery: "galeria-2",
-        images: [
-            { src: "img/hamster.jpeg", title: "", alt: "" },       
-            { src: "img/hamster2.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/hamster.jpeg", title: "", alt: "" },
+            { src: "img/hamster2.jpeg", title: "", alt: "" },
         ]
     },
 
@@ -198,8 +245,8 @@ const notesData = [
         date: "2024-11-5",
         displayDate: "Viernes 1 de Noviembre de 2024",
         gallery: "galeria-1",
-        images: [
-            { src: "img/origami.jpeg", title: "", alt: "" },       
+        img: [
+            { src: "img/origami.jpeg", title: "", alt: "" },
         ]
     },
 
