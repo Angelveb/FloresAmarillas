@@ -49,27 +49,31 @@ body {
     height: 100%;
 }
 
-/* Encabezado */
 header {
+    display: flex; /* Habilita flexbox */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
     background: rgba(0, 0, 0, 0.836);
-    /* Fondo semitransparente */
     color: #ffffff;
     transition: all 0.5s ease-in-out;
-    /* Transición más fluida */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10%);
-    /* Efecto de desenfoque */
+}
+
+.floweryellow {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px; /* Espacio entre el logo y el título */
+    padding-left: 20px;
 }
 
 body.scrolled header {
     padding: 15px 0;
-    /* Reducido para mayor contraste */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     background-color: rgba(0, 0, 0, 0.9);
-    /* Fondo más oscuro al desplazarse */
 }
 
 header:hover {
@@ -80,7 +84,7 @@ header:hover {
 
 header h1 {
     font-weight: 400;
-    padding-left: 20px;
+    padding-left: 10px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.1);
 }
