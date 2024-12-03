@@ -85,7 +85,7 @@ const notesData = [
         link: "https://www.nationalgeographic.es/animales/2015/01/las-tortugas-marinas-vuelven-al-lugar-en-el-que-nacieron-para-reproducirse",
         linkText: "Las tortugas marinas vuelven al lugar en el que nacieron para reproducirse",
         date: "2024-11-24",
-        displayDate: "Domingo 24 de Noviembre de 2024",
+        displayDate: "Domingo 24 de Noviembre de 2024 ",
         gallery: "galeria-12",
         img: [
             { src: "img/tortuga.jpg", title: "", alt: "" },
